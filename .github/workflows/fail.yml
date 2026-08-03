@@ -1,0 +1,8 @@
+name: fail-on-purpose
+on: [push, workflow_dispatch]
+jobs:
+  boom:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "about to fail"
+      - run: exit 1
